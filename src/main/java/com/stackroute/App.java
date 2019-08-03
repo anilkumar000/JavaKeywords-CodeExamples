@@ -27,17 +27,17 @@ public class App
 
 
 
-//        implementing of lambda expression
-
-        new Thread(()->{
-            System.out.println("Lambda");
-            System.out.println("Another Lambda");
-            System.out.println("Lambda2");
-        }
-        ).start();
-        Interface anInterface = ()->System.out.println("this is lambda expression");
-        // This calls above lambda expression and prints.
-        anInterface.accessLambda();
+////        implementing of lambda expression
+//
+//        new Thread(()->{
+//            System.out.println("Lambda");
+//            System.out.println("Another Lambda");
+//            System.out.println("Lambda2");
+//        }
+//        ).start();
+//        Interface anInterface = ()->System.out.println("this is lambda expression");
+//        // This calls above lambda expression and prints.
+//        anInterface.accessLambda();
 
 
 
@@ -47,5 +47,17 @@ public class App
         NestedClass.InnerClass.Nested nested=myInner.new Nested();
         nested.show();
 
+        ConstructorAndThisKeyWordImplementation constructorAndThisKeyWordImplementation =new ConstructorAndThisKeyWordImplementation();
+        constructorAndThisKeyWordImplementation.setName("Anil");
+        constructorAndThisKeyWordImplementation.setAge(23);
+        constructorAndThisKeyWordImplementation.setId(1);
+        System.out.println(constructorAndThisKeyWordImplementation.getName()+"\n"+ constructorAndThisKeyWordImplementation.getAge()+"\n"+ constructorAndThisKeyWordImplementation.getId());
+
+        CustomExceptionImplementation customExceptionImplementation=new CustomExceptionImplementation();
+        try {
+            customExceptionImplementation.exceptionImplementation(1);
+        }catch (CustomException ex){
+            System.out.println(ex.getMessage());
+        }
     }
 }
