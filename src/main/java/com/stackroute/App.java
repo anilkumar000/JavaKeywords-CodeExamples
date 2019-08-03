@@ -1,10 +1,7 @@
 package com.stackroute;
 
 
-import com.stackroute.domian.Arrays;
-import com.stackroute.domian.ConditionalStatementsAndLoops;
-import com.stackroute.domian.Interface;
-import com.stackroute.domian.VitaraBrezza;
+import com.stackroute.domian.*;
 
 
 public class App
@@ -42,6 +39,13 @@ public class App
         // This calls above lambda expression and prints.
         anInterface.accessLambda();
 
+
+
+        NestedClass nestedClass =new NestedClass();
+        NestedClass.InnerClass myInner = nestedClass.new InnerClass();
+
+        NestedClass.InnerClass.Nested nested=myInner.new Nested();
+        nested.show();
 
     }
 }
