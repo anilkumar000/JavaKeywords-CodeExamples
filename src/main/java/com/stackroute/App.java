@@ -3,6 +3,7 @@ package com.stackroute;
 
 import com.stackroute.domian.Arrays;
 import com.stackroute.domian.ConditionalStatementsAndLoops;
+import com.stackroute.domian.Interface;
 import com.stackroute.domian.VitaraBrezza;
 
 
@@ -24,9 +25,23 @@ public class App
 
         VitaraBrezza vitaraBrezza =new VitaraBrezza("black",500000.90f);
         vitaraBrezza.chagingGear();
-        vitaraBrezza.numberOfGears();
         vitaraBrezza.speed();
         vitaraBrezza.steering();
+
+
+
+//        implementing of lambda expression
+
+        new Thread(()->{
+            System.out.println("Lambda");
+            System.out.println("Another Lambda");
+            System.out.println("Lambda2");
+        }
+        ).start();
+        Interface anInterface = ()->System.out.println("this is lambda expression");
+        // This calls above lambda expression and prints.
+        anInterface.accessLambda();
+
 
     }
 }

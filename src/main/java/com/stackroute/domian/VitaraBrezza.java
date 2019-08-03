@@ -17,7 +17,8 @@ public class VitaraBrezza extends Car {
     }
 //override method of abstract class Car
     @Override
-    public void numberOfGears() {
+    public void steering() {
         System.out.println("this car has 5 gears");
     }
+
 }
